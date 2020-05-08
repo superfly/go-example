@@ -1,32 +1,9 @@
-app = "go-example"
-
-[build]
-  builder = "cloudfoundry/cnb:tiny"
+app = "dark-pine-4852"
 
 [[services]]
   internal_port = 8080
-  protocol = "tcp"
-
-  [services.concurrency]
-    hard_limit = 70
-    soft_limit = 50
-
-  [[services.http_checks]]
-    interval = 10000
-    method = "get"
-    path = "/"
-    protocol = "http"
-    timeout = 2000
-    tls_skip_verify = false
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = "443"
-
-  [[services.ports]]
-    handlers = ["http"]
-    port = "80"
-
-  [[services.tcp_checks]]
-    interval = 10000
-    timeout = 2000
+  protocol = "TCP"
+  [services.port.80]
+    handlers = ["HTTP"]
+  [services.port.443]
+    handlers = ["TLS", "HTTP"]
