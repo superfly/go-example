@@ -42,19 +42,23 @@ $ cd go-example
 $ flyctl apps create
 ```
 
-**2. Deploy**
+**2. Update app name**
+
+In `fly.toml`, replace `dark-pine-4852` with your new app's name.
+
+**3. Deploy**
 ```bash
 $ flyctl deploy
 ```
 
-**3. Find app's IP address**
+**4. Find app's IP address**
 
 Each Fly app gets a unique IP address. You can view the IP address with:
 ```bash
 $ flyctl info
 ```
 
-**4. View your app**
+**5. View your app**
 
 Now it's time to see your app in action. Load the IP address in a browser or use curl:
 
