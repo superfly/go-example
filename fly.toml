@@ -1,9 +1,12 @@
-app = "dark-pine-4852"
-
+# Run flyctl launch to add an app name
 [[services]]
   internal_port = 8080
   protocol = "TCP"
-  [services.port.80]
-    handlers = ["HTTP"]
-  [services.port.443]
-    handlers = ["TLS", "HTTP"]
+
+  [services.port]
+
+    [services.port.443]
+      handlers = ["tls", "http"]
+
+    [services.port.80]
+      handlers = ["http"]

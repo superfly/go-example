@@ -1,5 +1,5 @@
 # Use the offical Golang image to build the app: https://hub.docker.com/_/golang
-FROM golang:1.12 as builder
+FROM golang:1.18.2 as builder
 
 # Copy code to the image
 WORKDIR /go/src/github.com/superfly/go-example
