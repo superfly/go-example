@@ -37,24 +37,27 @@ $ cd go-example
 
 ## Deploy
 
-**1. Create a new app**
+**1. Create a new app from current fly.toml config and deploy it**
 ```bash
-$ flyctl apps create
+$ flyctl launch
 ```
+You need give it a name and decide which region deploy it to.
 
-**2. Deploy**
-```bash
-$ flyctl deploy
-```
 
-**3. Find app's IP address**
+**2. Find app's IP address**
 
 Each Fly app gets a unique IP address. You can view the IP address with:
 ```bash
 $ flyctl info
 ```
 
-**4. View your app**
+or open it directly in your favorite browser
+
+```bash
+$ flyctl apps open
+```
+
+**3. View your app**
 
 Now it's time to see your app in action. Load the IP address in a browser or use curl:
 
